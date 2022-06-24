@@ -56,6 +56,6 @@ export const itemsSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { pagePlus, loadmore } = itemsSlice.actions
+export const { pagePlus } = itemsSlice.actions
 
 export default itemsSlice.reducer
