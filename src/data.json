@@ -1,0 +1,164 @@
+[
+  {
+    "type": "Design",
+    "name": "Spectacled bear",
+    "img": "https://i.pinimg.com/564x/54/36/02/54360266ed4307730e6881f6fd694b6c.jpg",
+    "id": "1"
+  },
+  {
+    "type": "Branding",
+    "name": "Sloth bear",
+    "img": "https://i.pinimg.com/564x/34/de/96/34de96b67ff626a407160ac81dc2ded0.jpg",
+    "id": "2"
+  },
+  {
+    "type": "Design",
+    "name": "Asian black bear",
+    "img": "https://i.pinimg.com/564x/af/8c/85/af8c85f269b8891fa3f13528cb175e44.jpg",
+    "id": "3"
+  },
+  {
+    "type": "Illustration",
+    "name": "Polar bear",
+    "img": "https://i.pinimg.com/564x/e3/21/3b/e3213b04e027aaeb289ad7f425b6c610.jpg",
+    "id": "4"
+  },
+  {
+    "type": "Motion",
+    "name": "Giant panda",
+    "img": "https://i.pinimg.com/564x/d2/5e/72/d25e722864cd4099d750b7d04f0cf4de.jpg",
+    "id": "5"
+  },
+  {
+    "type": "Branding",
+    "name": "Brown bear",
+    "img": "https://i.pinimg.com/736x/33/2a/65/332a652879a17afdbe221d3dcf66ef73.jpg",
+    "id": "6"
+  },
+  {
+    "type": "Motion",
+    "name": "Sloth bear",
+    "img": "https://i.pinimg.com/564x/29/ba/21/29ba2194bcd558dfc50ec8e4fb1115c2.jpg",
+    "id": "7"
+  },
+  {
+    "type": "Motion",
+    "name": "Sloth bear",
+    "img": "https://i.pinimg.com/564x/6d/02/35/6d023589e9844273daed42b8f2dbd23f.jpg",
+    "id": "8"
+  },
+  {
+    "type": "Motion",
+    "name": "Sun bear",
+    "img": "https://i.pinimg.com/564x/8f/2e/92/8f2e921409b5fd2c7dd2441e8d565581.jpg",
+    "id": "9"
+  },
+  {
+    "type": "Motion",
+    "name": "Asian black bear",
+    "img": "https://i.pinimg.com/564x/70/96/7a/70967a37d5bfc6149ab35fd6a301df0e.jpg",
+    "id": "10"
+  },
+  {
+    "type": "Design",
+    "name": "Brown bear",
+    "img": "https://i.pinimg.com/564x/81/45/79/814579faa9f95e6273d2279d64a8a665.jpg",
+    "id": "11"
+  },
+  {
+    "type": "Branding",
+    "name": "Brown bear",
+    "img": "https://i.pinimg.com/564x/29/94/91/2994918ce48772467cafbc550a45b93f.jpg",
+    "id": "12"
+  },
+  {
+    "type": "Illustration",
+    "name": "Polar bear",
+    "img": "https://i.pinimg.com/564x/a8/d5/9f/a8d59fc00f1a084b56d109df3cf38575.jpg",
+    "id": "13"
+  },
+  {
+    "type": "Branding",
+    "name": "Sun bear",
+    "img": "https://i.pinimg.com/564x/b4/ff/8b/b4ff8b134811273848aff58c200b1a46.jpg",
+    "id": "14"
+  },
+  {
+    "type": "Design",
+    "name": "Giant panda",
+    "img": "https://i.pinimg.com/736x/1f/5f/a4/1f5fa488a762ae881454f1366a7ad44a.jpg",
+    "id": "15"
+  },
+  {
+    "type": "Branding",
+    "name": "Polar bear",
+    "img": "https://i.pinimg.com/564x/70/ea/0a/70ea0a37b2c6a145aa74fd31f23a0aa9.jpg",
+    "id": "16"
+  },
+  {
+    "type": "Illustration",
+    "name": "Sun bear",
+    "img": "https://i.pinimg.com/564x/e5/13/d3/e513d38b416d0410b89a014a7df5a180.jpg",
+    "id": "17"
+  },
+  {
+    "type": "Branding",
+    "name": "Giant panda",
+    "img": "https://i.pinimg.com/564x/63/d3/8f/63d38fd1be0144cc210ad48f09f1c6b4.jpg",
+    "id": "18"
+  },
+  {
+    "type": "Design",
+    "name": "Brown bear",
+    "img": "https://i.pinimg.com/564x/da/ba/59/daba591c09b20422896b4882f737bcc6.jpg",
+    "id": "19"
+  },
+  {
+    "type": "Branding",
+    "name": "Brown bear",
+    "img": "https://i.pinimg.com/564x/cb/80/80/cb80806c1e526700e8f16133e9a69e91.jpg",
+    "id": "20"
+  },
+  {
+    "type": "Design",
+    "name": "American black bear",
+    "img": "https://i.pinimg.com/564x/7c/15/44/7c1544cafdeea48293b32328625c05a4.jpg",
+    "id": "21"
+  },
+  {
+    "type": "Design",
+    "name": "Giant panda",
+    "img": "https://i.pinimg.com/564x/97/78/c1/9778c17b2380b2687cbf74665183c65c.jpg",
+    "id": "22"
+  },
+  {
+    "type": "Branding",
+    "name": "Sloth bear",
+    "img": "https://i.pinimg.com/564x/c9/a3/5c/c9a35cbeee59a910d278185bbc8e6e9a.jpg",
+    "id": "23"
+  },
+  {
+    "type": "Branding",
+    "name": "Spectacled bear",
+    "img": "https://i.pinimg.com/564x/9e/5e/4d/9e5e4da2286a1f2954f60456b208c8fc.jpg",
+    "id": "24"
+  },
+  {
+    "type": "Illustration",
+    "name": "Sun bear",
+    "img": "https://i.pinimg.com/564x/ba/54/50/ba5450969faeac7bc4c2321cdc241121.jpg",
+    "id": "25"
+  },
+  {
+    "type": "Illustration",
+    "name": "Asian black bear",
+    "img": "https://i.pinimg.com/564x/1f/ad/28/1fad28dc06aeb5004cb71d16004ea6d9.jpg",
+    "id": "26"
+  },
+  {
+    "type": "Design",
+    "name": "Sun bear",
+    "img": "https://i.pinimg.com/564x/d0/82/bf/d082bf12ef2f29cf2d61d35e666de176.jpg",
+    "id": "27"
+  }
+]

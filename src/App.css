@@ -1,38 +1,267 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.container {
+  padding: 16px 135px 0px;
+  display: grid;
+  grid-template-areas:
+                'headerTop'
+                'headerBody';
+}
+
+.header {
+
+  background-color: #28293E;
+  height: 400px;
+  color: #FFF;
+}
+
+.headerTop {
+  grid-area: headerTop;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 24px;
+  height: 43px;
+}
+
+.logoImg {
+  margin-right: 15px;
+  padding-bottom: 7px;
+}
+
+.headerBody {
+  grid-area: headerBody;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 522px;
+  align-items: center;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: #EF6D58;
+}
+
+.headerButton {
+  width: 138px;
+  height: 48px;
+  border: 1px #676877 solid;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background-color: #28293E;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.headerButton:hover {
+  cursor: pointer;
+  background-color: #EF6D58;
+}
+
+.headerBody {
+  justify-self: center;
+  margin-top: 86px;
+}
+
+.headerTitle {
+  font-weight: 500;
+  font-size: 72px;
+  margin-bottom: 34px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headerSubtitle {
+  width: 570px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #B1B2B9;
+  line-height: 32px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+  background-color: #FDF0E9;
+  padding-top: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sort {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sortItem {
+  display: inline;
+  margin-right: 63px;
+  color: #391400;
+  opacity: 64%;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sortItemActive {
+  color: #16CD53;
+  opacity: 100%;
+}
+
+.sortItem:last-child {
+  margin-right: 0;
+}
+
+.sortItem:hover {
+  color: #16CD53;
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.sortDropdown {
+  display: none;
+}
+
+
+.contentBody {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-column-gap: 30px;
+  grid-row-gap: 32px;
+  padding-top: 75px;
+  justify-content: center;
+}
+
+@media (max-width: 1435px) {
+  .contentBody {
+    grid-template-columns: repeat(2, 370px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1100px) {
+  .navigation {
+    display: none;
   }
+  .headerButton {
+    display: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  .contentBody {
+    grid-template-columns: repeat(1, 370px);
+  }
+}
+
+@media (max-width: 870px) {
+  .sortList {
+    display: none;
+  }
+  .sortDropdown {
+    display: inline;
+  }
+  .sortDropdown li a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .dropdown {
+    visibility: hidden;
+  }
+
+  .dropdownItem {
+    text-decoration: none;
+  }
+}
+
+.item {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.item:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.itemSelected {
+  border: 7px #90E149 solid;
+}
+
+.itemImg {
+  height: 416px;
+  width: 356px;
+  margin-bottom: -4px;
+}
+
+.itemType {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  bottom: 122px;
+  left: 48px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  width: 84px;
+  height: 38px;
+}
+
+.itemTitle {
+  position: absolute;
+  bottom: 53px;
+  left: 48px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.loadingGif {
+  width: 52px;
+  height: 52px;
+  justify-self: center;
+  align-self: center;
+}
+
+.loadMore {
+  height: 48px;
+  width: 170px;
+  margin-top: 80px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 9px rgba(68, 68, 68, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.loadMore:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
 }
