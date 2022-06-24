@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     activeCategory: 0,
-    activeType: '',
+    activeType: 'Show All',
     sortList: [
         {
             sortType: 'Show All',

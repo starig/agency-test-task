@@ -5,7 +5,7 @@
 }
 
 .container {
-  padding: 16px 135px 0px;
+  padding: 16px;
   display: grid;
   grid-template-areas:
                 'headerTop'
@@ -107,6 +107,10 @@
   justify-content: center;
 }
 
+.sortPopup {
+  display: none;
+}
+
 .sortItem {
   display: inline;
   margin-right: 63px;
@@ -131,18 +135,20 @@
   cursor: pointer;
 }
 
-.sortDropdown {
-  display: none;
-}
-
 
 .contentBody {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
+  grid-template-columns: repeat(4, 370px);
   grid-column-gap: 30px;
   grid-row-gap: 32px;
   padding-top: 75px;
   justify-content: center;
+}
+
+@media (max-width: 1750px) {
+  .contentBody {
+    grid-template-columns: repeat(3, 370px);
+  }
 }
 
 @media (max-width: 1435px) {
@@ -170,10 +176,29 @@
   .sortList {
     display: none;
   }
-  .sortDropdown {
-    display: inline;
+
+  .sortItem {
+    margin-right: 0;
   }
-  .sortDropdown li a {
+  .sortPopup {
+    display: grid;
+    justify-items: center;
+  }
+
+  .sortPopup li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: #fff;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .sortPopup li a {
     text-decoration: none;
     cursor: pointer;
   }
@@ -184,16 +209,31 @@
   .dropdownItem {
     text-decoration: none;
   }
+
+  .headerTitle {
+    font-size: 48px;
+  }
+
+  .headerSubtitle {
+    width: 300px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    padding: 0;
+  }
 }
 
 .item {
   position: relative;
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .item:hover {
   cursor: pointer;
   transform: translateY(-5px);
+  border: 7px #90E149 solid;
 }
 
 .itemSelected {
@@ -204,6 +244,27 @@
   height: 416px;
   width: 356px;
   margin-bottom: -4px;
+}
+
+.itemDelete {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  top: 20px;
+  right: 20px;
+  background-color: #fdf0e7;
+  color: #B1B2B9;
+  font-weight: 400;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+}
+
+.itemDelete:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .itemType {
@@ -265,3 +326,5 @@
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
   transform: translateY(-5px);
 }
+
+

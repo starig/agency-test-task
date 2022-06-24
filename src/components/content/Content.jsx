@@ -29,6 +29,7 @@ const Content = () => {
         dispatch(pagePlus(page));
     }
 
+
     return (
         <div className="content">
             <div className="container">
@@ -37,7 +38,7 @@ const Content = () => {
                     {
                          isLoading ? [...Array(9)].map((item, id) => <Skeleton key={id}/>) :
                          data.map((item, id) => <Item key={id} imgUrl={item.img} type={item.type}
-                                                     title={item.name} id={id}/>)
+                                                     title={item.name} id={item.id} itemId={id}/>)
                     }
                 </div>
             </div>

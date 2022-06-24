@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {setActiveCategory, setType} from "../../redux/slices/filterSlice";
 
 const Sort = () => {
-    const { sortList, activeCategory } = useSelector(state => state.filter);
+    const { sortList, activeCategory, activeType } = useSelector(state => state.filter);
+    const [popupStatus, setPopupStatus] = useState(false);
     const dispatch = useDispatch();
     return (
         <div className="sort">
@@ -21,15 +22,23 @@ const Sort = () => {
                         </li>)
                 }
             </ul>
-            <ul className="sortDropdown">
-                <li><a href="#">Work &dtrif;</a>
-                    <ul className="dropdown">
-                        <li><a href="#" className="dropdownItem">Web Development</a></li>
-                        <li><a href="#" className="dropdownItem">Web Design</a></li>
-                        <li><a href="#" className="dropdownItem">Illustration</a></li>
-                        <li><a href="#" className="dropdownItem">Iconography</a></li>
-                    </ul>
-                </li>
+            <ul className="sortPopup">
+                <li className="popupTitle" onClick={() => {
+                    setPopupStatus(!popupStatus);
+                }}>{activeType}</li>
+                {
+                    popupStatus && sortList.map((item, id) =>
+                        <li
+                            key={id}
+                            className={activeCategory === id ? `sortItem sortItemActive` : `sortItem`}
+                            onClick={() => {
+                                dispatch(setActiveCategory(id));
+                                dispatch(setType(id));
+                                setPopupStatus(false);
+                            }}>
+                            {sortList[id].sortType}
+                        </li>)
+                }
             </ul>
         </div>
     )

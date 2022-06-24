@@ -16,6 +16,8 @@ const initialState = {
     isLoading: true,
     isFetching: true,
     loadMore: false,
+    selectedItems: [],
+    removedItems: [],
 }
 
 
@@ -28,6 +30,24 @@ export const itemsSlice = createSlice({
             action.payload === 3 ? state.page = 1 : state.page = action.payload + 1;
             state.loadMore = true;
         },
+        toggleItem: (state, action) => {
+            if (state.selectedItems.includes(action.payload)) {
+                const index = state.selectedItems.indexOf(action.payload);
+                state.selectedItems.splice(index, 1);
+            } else {
+                state.selectedItems.push(action.payload);
+            }
+
+        },
+        removeItem: (state, action) => {
+            //remove item from localstate
+            state.data.splice(action.payload, 1);
+            console.log(action.payload)
+        },
+        addToRemovedItems: (state, action) => {
+            //remove item from mockapi
+            state.removedItems.push(action.payload);
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchItems.fulfilled, (state, action) => {
@@ -37,15 +57,20 @@ export const itemsSlice = createSlice({
                 state.page = 1;
                 state.data = action.payload;
             }
+            state.data.forEach(item => {
+                if (state.removedItems.includes(item.id)) {
+                    state.data.splice(state.data.indexOf(item), 1);
+                }
+            })
             state.isLoading = false;
             state.isFetching = false;
             state.loadMore = false;
         });
-        builder.addCase(fetchItems.pending, (state, action) => {
+        builder.addCase(fetchItems.pending, (state) => {
             state.isLoading = !state.loadMore;
             state.isFetching = true;
         });
-        builder.addCase(fetchItems.rejected, (state, action) => {
+        builder.addCase(fetchItems.rejected, (state) => {
             state.isLoading = false;
             state.isFetching = false;
             state.loadMore = false;
@@ -56,6 +81,6 @@ export const itemsSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { pagePlus } = itemsSlice.actions
+export const { pagePlus, toggleItem, removeItem, addToRemovedItems } = itemsSlice.actions
 
 export default itemsSlice.reducer
